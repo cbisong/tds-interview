@@ -36,10 +36,10 @@ def decrypt_data_save_gcs(data_path):
     #     file.write(decrypted_file)
     
     # save decrypted data to GCP
-    file_name = 'data/sample_data.json'
+    file_name = 'secure_zone/sample_data.json'
     
     write_to_blob(bucket_name, file_name, decrypted_file)
     
 if __name__ == '__main__':
-    decrypt_data_save_gcs()
+    decrypt_data_save_gcs('landing_zone/sample_data.json.enc')
     

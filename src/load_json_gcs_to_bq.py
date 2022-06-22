@@ -4,7 +4,7 @@ from util import load_json_to_bq
 
 def load_json_gcs_to_bq():
     # project attributes
-    json_uri = 'gs://cbisong-ta-data-engineer/data/sample_data.json'
+    json_uri = 'gs://cbisong-ta-data-engineer/secure_zone/sample_data.json'
     
     project_id = 'cbisong-sandbox'
     dataset_name = 'tds_dataset'

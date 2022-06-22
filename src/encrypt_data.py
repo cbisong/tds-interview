@@ -23,7 +23,7 @@ def encrypt_data():
         file.write(encrypted_file)
         
     # save encrypted data to GCP
-    file_name = 'data/sample_data.json.enc'
+    file_name = 'landing_zone/sample_data.json.enc'
     
     write_to_blob(bucket_name, file_name, encrypted_file)
     
