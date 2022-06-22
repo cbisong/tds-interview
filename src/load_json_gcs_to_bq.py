@@ -1,8 +1,4 @@
-# decrypt_data_save_gcs.py
-
-import json
-
-from google.cloud import storage
+# load_json_gcs_to_bq.py
 
 from util import load_json_to_bq
 
@@ -10,7 +6,7 @@ def load_json_gcs_to_bq():
     # project attributes
     json_uri = 'gs://cbisong-ta-data-engineer/data/sample_data.json'
     
-    project_id = 'ebisong-sandbox'
+    project_id = 'cbisong-sandbox'
     dataset_name = 'tds_dataset'
     table_name = 'tds_table'
     

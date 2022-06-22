@@ -5,7 +5,7 @@ from util import encrypt_symmetric, write_to_blob
 
 def encrypt_data():
     # project attributes
-    project_id = 'ebisong-sandbox'
+    project_id = 'cbisong-sandbox'
     location_id = 'global'
     key_ring_id = 'tds-keyring'
     key_id = 'tds-symmetric-key'

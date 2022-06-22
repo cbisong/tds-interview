@@ -6,9 +6,9 @@ from google.cloud import storage
 
 from util import decrypt_symmetric, write_to_blob
 
-def decrypt_data_save_gcs():
+def decrypt_data_save_gcs(data_path):
     # project attributes
-    project_id = 'ebisong-sandbox'
+    project_id = 'cbisong-sandbox'
     location_id = 'global'
     key_ring_id = 'tds-keyring'
     key_id = 'tds-symmetric-key'
@@ -18,7 +18,7 @@ def decrypt_data_save_gcs():
     
     client = storage.Client()
     bucket = client.get_bucket(bucket_name)
-    blob = bucket.get_blob('data/sample_data.json.enc')
+    blob = bucket.get_blob(data_path)
     
     # read plaintext
     ciphertext = blob.download_as_string()
